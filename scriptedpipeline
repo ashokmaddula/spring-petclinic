@@ -1,12 +1,12 @@
 node{
   stage ('cloning') {
-    git url: 'https://github.com/ashokmaddula/spring-petclinic.git'
+      git url: 'https://github.com/ashokmaddula/spring-petclinic.git'
  
     stage ('install') {
-      sh "mvn clean install"
+        sh "mvn clean install"
       
       stage ('building') {
-        sh 'cd spring-petclinic/ && mvn package'
+          sh 'cd spring-petclinic/ && mvn package'
       }    
     }
   }
